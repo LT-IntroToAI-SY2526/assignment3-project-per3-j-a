@@ -3,7 +3,6 @@ from typing import List
 
 def match(pattern: List[str], source: List[str]) -> List[str]:
     """Attempt to match pattern to source
-
     % matches a sequence of zero or more words and _ matches any single word
 
     Args:
