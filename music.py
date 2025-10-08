@@ -14,7 +14,7 @@ from typing import List, Tuple
 
 movie_db: List[Tuple[str, str, int, List[str]]] = [
     (
-        "amarcord",  # title
+        "amarcord",  # name of song 
         "federico fellini",  # director
         1974,  # year
         [
@@ -448,4 +448,65 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
         ]
 
     )
+        (
+        "pulp fiction",
+        "quentin tarantino",
+        1994,
+        [
+            "john travolta",
+            "uma thurman",
+            "samuel l. jackson",
+            "bruce willis",
+            "ving rhames",
+        ],
+    ),
+    (
+        "the shawshank redemption",
+        "frank darabont",
+        1994,
+        [
+            "tim robbins",
+            "morgan freeman",
+            "bob gunton",
+            "william sadler",
+            "clancy brown",
+        ],
+    ),
+    (
+        "parasite",
+        "bong joon-ho",
+        2019,
+        [
+            "song kang-ho",
+            "lee sun-kyun",
+            "cho yeo-jeong",
+            "choi woo-shik",
+            "park so-dam",
+        ],
+    ),
+    (
+        "black panther",
+        "ryan coogler",
+        2018,
+        [
+            "chadwick boseman",
+            "michael b. jordan",
+            "lupita nyong'o",
+            "danai gurira",
+            "letitia wright",
+        ],
+    ),
+    (
+        "mad max: fury road",
+        "george miller",
+        2015,
+        [
+            "tom hardy",
+            "charlize theron",
+            "nicholas hoult",
+            "zoe kravitz",
+            "rosi",
+        ],
+    )    
+
 ]
