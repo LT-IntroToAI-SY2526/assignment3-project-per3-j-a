@@ -204,13 +204,15 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "charles bickford",
         ],
     ),
-    (
+
+    #Max's Sections
+    (#1
         "after the rehearsal",
         "ingmar bergman",
         1984,
         ["erland josephson", "ingrid thulin", "lena olin", "nadja palmstjerna-weiss"],
     ),
-    (
+    (#2
         "amadeus",
         "milos forman",
         1984,
@@ -224,7 +226,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "jeffrey jones",
         ],
     ),
-    (
+    (#3
         "blood simple",
         "joel coen",
         1985,
@@ -236,7 +238,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "samm-art williams",
         ],
     ),
-    (
+    (#4
         "chinatown",
         "roman polanski",
         1974,
@@ -251,7 +253,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "roman polanski",
         ],
     ),
-    (
+    (#5
         "the cotton club",
         "francis ford coppola",
         1984,
@@ -265,7 +267,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "fred gwynne",
         ],
     ),
-    (
+    (#6
         "the crying game",
         "neil jordan",
         1992,
@@ -279,7 +281,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "joe savino",
         ],
     ),
-    (
+    (#7
         "the day of the jackal",
         "fred zinnemann",
         1973,
@@ -294,7 +296,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "cyril cusack",
         ],
     ),
-    (
+    (#8
         "diva",
         "jean-jacques beineix",
         1981,
@@ -307,13 +309,13 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "chantal deruaz",
         ],
     ),
-    (
+    (#9
         "the dresser",
         "peter yates",
         1984,
         ["albert finney", "tom courtenay", "edward fox", "zena walker"],
     ),
-    (
+    (#10
         "el norte",
         "gregory nava",
         1983,
@@ -325,7 +327,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "trinidad silva",
         ],
     ),
-    (
+    (#11
         "the exorcist",
         "william friedkin",
         1973,
@@ -338,7 +340,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "lee j cobb",
         ],
     ),
-    (
+    (#12
         "a fish called wanda",
         "michael chrichton",
         1988,
@@ -352,7 +354,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "patricia hayes",
         ],
     ),
-    (
+    (#13
         "flirting",
         "john duigan",
         1992,
@@ -366,8 +368,13 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "kiri paramore",
         ],
     ),
-    ("gates of heaven", "errol morris", 1978, []),
-    (
+    (#14
+        "gates of heaven", "errol morris", 1978,
+        [
+
+        ]
+    ),
+    (#15
         "house of games",
         "david mamet",
         1987,
