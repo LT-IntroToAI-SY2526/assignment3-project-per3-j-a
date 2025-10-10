@@ -12,198 +12,68 @@
 # `[(title, director, year, [actress_one, actor_two, ...]), ...]`
 from typing import List, Tuple
 
-Album_db: List[Tuple[str, str, int, List[str]]] = [
+album_db: List[Tuple[str, str, int, List[str]]] = [
     #Juan's 15 sections of albums
     (#1
-        "amarcord",  # name of song 
-        "federico fellini",  # director
-        1974,  # year
+        "Plastic Beach",  # name of song 
+        "Gorillaz",  # director
+        2010,  # year
         [
-            "magali noel",
-            "bruno zanin",
-            "pupella maggio",
-            "armando drancia",
+            "Plastic Beach",
+            "On Melancholy Hill",
+            "Rhinestone Eyes",
+            "Glitter Freeze",
         ],  # actors/actresses
     ),
-    (#2
-        "the big easy",
-        "jim mcbride",
-        1987,
-        [
-            "dennis quaid",
-            "ellen barkin",
-            "ned beatty",
-            "lisa jane persky",
-            "john goodman",
-            "charles ludlam",
-        ],
-    ),
-    (#3
-        "boyz n the hood",
-        "john singleton",
-        1991,
-        [
-            "cuba gooding jr.",
-            "ice cube",
-            "larry fishburne",
-            "tyra ferrell",
-            "morris chestnut",
-        ],
-    ),
-    (#4
-        "dead again",
-        "kenneth branagh",
-        1991,
-        [
-            "kenneth branagh",
-            "emma thompson",
-            "andy garcia",
-            "derek jacobi",
-            "hanna schygulla",
-        ],
-    ),
+
     (#5
-        "the godfather",
-        "francis ford coppola",
-        1972,
-        ["marlon brando", "al pacino", "james caan", "robert duvall", "diane keaton"],
-    ),
-    (#6
-        "an american in paris",
-        "vincente minnelli",
-        1952,
-        ["gene kelley", "leslie caron", "oscar levant", "nina foch", "george guetary"],
-    ),
+        "Childish Gambino",
+        "Camp",
+        2011,
+        [
+            "L.E.S", 
+            "Fire Fly", 
+            "Bonfire", 
+            "Heartbeat", 
+        ],
+    )
     (#7
-        "casablanca",
-        "michael curtiz",
-        1942,
+        "Frank Ocean",
+        "Channel Orange",
+        2012,
         [
-            "humphrey bogart",
-            "ingrid bergman",
-            "paul henreid",
-            "claude rains",
-            "sydney greenstreet",
-            "peter lorre",
-            "s z sakall",
-            "conrad veidt",
-            "dooley wilson",
+            "Pink Matter",
+            "Super Rich Kids",
+            "Thinking Bout You",
+            "End",
         ],
     ),
-    (#8
-        "citizen kane",
-        "orson welles",
-        1941,
-        [
-            "orson welles",
-            "joseph cotten",
-            "dorothy comingore",
-            "ray collins",
-            "george coulouris",
-            "agnes moorehead",
-            "ruth warrick",
-        ],
-    ),
-    (#9
-        "gone with the wind",
-        "victor fleming",
-        1939,
-        [
-            "clark gable",
-            "vivien leigh",
-            "leslie howard",
-            "olivia de havilland",
-            "hattie mcdaniel",
-            "butterfly mcqueen",
-        ],
-    ),
+
     (#10
-        "lawrence of arabia",
-        "david lean",
-        1962,
+        "Doris",
+        "Earl Sweatshirt",
+        2013,
         [
-            "peter otoole",
-            "alec guinness",
-            "anthony quinn",
-            "jack hawkins",
-            "jose ferrer",
-            "omar sharif",
-            "anthony quayle",
-            "claude rains",
-            "arthur kennedy",
-            "donald wolfit",
+            "Woah",
+            "Sasquatch",
+            "Molasses",
+            "Chum",
+           
         ],
     ),
-    (#11
-        "the manchurian candidate",
-        "john frankenheimer",
-        1962,
-        [
-            "frank sinatra",
-            "laurence harvey",
-            "janet leigh",
-            "angela lansbury",
-            "henry silva",
-            "james gregory",
-            "leslie parrish",
-            "john mcgiver",
-            "khigh dhiegh",
-            "james edwards",
-        ],
-    ),
-    (#12
-        "metropolis",
-        "fritz lang",
-        1926,
-        [
-            "alfred abel",
-            "gustay frohlich",
-            "brigitte helm",
-            "rudolf kleinrogge",
-            "heinrich george",
-        ],
-    ),
+   
     (#13
-        "othello",
-        "orson welles",
-        1952,
+        "The Black Keys",
+        "Turn Blue",
+        2014,
         [
-            "orson welles",
-            "michael mac liammoir",
-            "robert coote",
-            "suzanne cloutier",
-            "faye compton",
-            "doris dowling",
-            "michael laurence",
+            "Weight of Love",
+            "Turn Blue",
+            "Fever",
+            "In Time",
         ],
     ),
-    (#14
-        "spartacus",
-        "stanley kubrick",
-        1960,
-        [
-            "kirk douglas",
-            "laurence olivier",
-            "jean simmons",
-            "charles laughton",
-            "peter ustinov",
-            "john gavin",
-            "tony curtis",
-            "woody strode",
-        ],
-    ),
-    (#15
-        "a star is born",
-        "george cuckor",
-        1954,
-        [
-            "judy garland",
-            "james mason",
-            "jack carson",
-            "tommy noonan",
-            "charles bickford",
-        ],
-    ),
+    
     (
         "after the rehearsal",
         "ingmar bergman",
