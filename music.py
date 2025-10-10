@@ -75,18 +75,9 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
             "butterfly mcqueen",
         ],
     ),
-    (#10
-        "lawrence of arabia",
-        "david lean",
-        1962,
-        [
-            "Woah",
-            "Sasquatch",
-            "Molasses",
-            "Chum",
-           
-        ],
-    ),
+    , 
+    (#10 
+        "Doris", "Earl Sweatshirt", 2013, [ "Woah", "Sasquatch", "Molasses", "Chum", ], ),
    
     (#13
         "The Black Keys",
