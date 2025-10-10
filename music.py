@@ -12,7 +12,7 @@
 # `[(title, director, year, [actress_one, actor_two, ...]), ...]`
 from typing import List, Tuple
 
-movie_db: List[Tuple[str, str, int, List[str]]] = [
+Album_db: List[Tuple[str, str, int, List[str]]] = [
     #Juan's 15 sections of albums
     (#1
         "amarcord",  # name of song 
