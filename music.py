@@ -13,7 +13,8 @@
 from typing import List, Tuple
 
 movie_db: List[Tuple[str, str, int, List[str]]] = [
-    (
+    #Juan's 15 sections of albums
+    (#1
         "amarcord",  # name of song 
         "federico fellini",  # director
         1974,  # year
@@ -24,7 +25,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "armando drancia",
         ],  # actors/actresses
     ),
-    (
+    (#2
         "the big easy",
         "jim mcbride",
         1987,
@@ -37,7 +38,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "charles ludlam",
         ],
     ),
-    (
+    (#3
         "boyz n the hood",
         "john singleton",
         1991,
@@ -49,7 +50,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "morris chestnut",
         ],
     ),
-    (
+    (#4
         "dead again",
         "kenneth branagh",
         1991,
@@ -61,19 +62,19 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "hanna schygulla",
         ],
     ),
-    (
+    (#5
         "the godfather",
         "francis ford coppola",
         1972,
         ["marlon brando", "al pacino", "james caan", "robert duvall", "diane keaton"],
     ),
-    (
+    (#6
         "an american in paris",
         "vincente minnelli",
         1952,
         ["gene kelley", "leslie caron", "oscar levant", "nina foch", "george guetary"],
     ),
-    (
+    (#7
         "casablanca",
         "michael curtiz",
         1942,
@@ -89,7 +90,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "dooley wilson",
         ],
     ),
-    (
+    (#8
         "citizen kane",
         "orson welles",
         1941,
@@ -103,7 +104,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "ruth warrick",
         ],
     ),
-    (
+    (#9
         "gone with the wind",
         "victor fleming",
         1939,
@@ -116,7 +117,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "butterfly mcqueen",
         ],
     ),
-    (
+    (#10
         "lawrence of arabia",
         "david lean",
         1962,
@@ -133,7 +134,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "donald wolfit",
         ],
     ),
-    (
+    (#11
         "the manchurian candidate",
         "john frankenheimer",
         1962,
@@ -150,7 +151,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "james edwards",
         ],
     ),
-    (
+    (#12
         "metropolis",
         "fritz lang",
         1926,
@@ -162,7 +163,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "heinrich george",
         ],
     ),
-    (
+    (#13
         "othello",
         "orson welles",
         1952,
@@ -176,7 +177,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "michael laurence",
         ],
     ),
-    (
+    (#14
         "spartacus",
         "stanley kubrick",
         1960,
@@ -191,7 +192,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "woody strode",
         ],
     ),
-    (
+    (#15
         "a star is born",
         "george cuckor",
         1954,
