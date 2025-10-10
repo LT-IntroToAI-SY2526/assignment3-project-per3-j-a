@@ -48,11 +48,37 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
             "End",
         ],
     ),
-
+    (#8
+        "citizen kane",
+        "orson welles",
+        1941,
+        [
+            "orson welles",
+            "joseph cotten",
+            "dorothy comingore",
+            "ray collins",
+            "george coulouris",
+            "agnes moorehead",
+            "ruth warrick",
+        ],
+    ),
+    (#9
+        "gone with the wind",
+        "victor fleming",
+        1939,
+        [
+            "clark gable",
+            "vivien leigh",
+            "leslie howard",
+            "olivia de havilland",
+            "hattie mcdaniel",
+            "butterfly mcqueen",
+        ],
+    ),
     (#10
-        "Doris",
-        "Earl Sweatshirt",
-        2013,
+        "lawrence of arabia",
+        "david lean",
+        1962,
         [
             "Woah",
             "Sasquatch",
@@ -152,7 +178,7 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
     (
         "the day of the jackal",
         "fred zinnemann",
-        1973,
+        2,
         [
             "edward fox",
             "terence alexander",
@@ -164,7 +190,7 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
             "cyril cusack",
         ],
     ),
-    (
+    (#3
         "diva",
         "jean-jacques beineix",
         1981,
@@ -177,13 +203,17 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
             "chantal deruaz",
         ],
     ),
-    (
+    (#4
         "the dresser",
         "peter yates",
         1984,
-        ["albert finney", "tom courtenay", "edward fox", "zena walker"],
+        ["albert finney", 
+         "tom courtenay", 
+         "edward fox", 
+         "zena walker"
+        ],
     ),
-    (
+    (#5
         "el norte",
         "gregory nava",
         1983,
@@ -195,189 +225,4 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
             "trinidad silva",
         ],
     ),
-    (
-        "the exorcist",
-        "william friedkin",
-        1973,
-        [
-            "ellen burstyn",
-            "linda blair",
-            "jason miller",
-            "max von sydow",
-            "kitty winn",
-            "lee j cobb",
-        ],
-    ),
-    (
-        "a fish called wanda",
-        "michael chrichton",
-        1988,
-        [
-            "john cleese",
-            "jamie lee curtis",
-            "kevin kline",
-            "michael palin",
-            "maria aitken",
-            "tom georgeson",
-            "patricia hayes",
-        ],
-    ),
-    (
-        "flirting",
-        "john duigan",
-        1992,
-        [
-            "noah taylor",
-            "thandie newton",
-            "nicole kidman",
-            "bartholomew rose",
-            "felix nobis",
-            "josh picker",
-            "kiri paramore",
-        ],
-    ),
-    ("gates of heaven", "errol morris", 1978, []),
-    (
-        "house of games",
-        "david mamet",
-        1987,
-        [
-            "lindsay crouse",
-            "joe mantegna",
-            "mike nussman",
-            "lilia skala",
-            "j t walsh",
-            "jack wallace",
-        ],
-    ),
-    (
-        "iceman",
-        "fred schepisi",
-        1984,
-        ["timothy hutton", "john lone", "lindsay crouse"],
-    ),
-    (
-        "jaws",
-        "steven spielberg",
-        1975,
-        [
-            "roy scheider",
-            "robert shaw",
-            "richard dreyfuss",
-            "lorraine gary",
-            "murray hamilton",
-        ],
-    ),
-    (
-        "johnny got his gun",
-        "dalton trumbo",
-        1971,
-        [
-            "timothy bottoms",
-            "kathy fields",
-            "jason robards",
-            "diane varsi",
-            "donald sutherland",
-            "eduard franz",
-        ],
-    ),
-    (
-        "local hero",
-        "bill forsyth",
-        1983,
-        [
-            "burt lancaster",
-            "peter reigert",
-            "peter capaldi",
-            "fulton mckay",
-            "denis lawson",
-        ],
-    ),
-    (
-        "malcolm x",
-        "spike lee",
-        1992,
-        [
-            "denzel washington",
-            "angela basset",
-            "albert hall",
-            "al freeman jr",
-            "delroy lindo",
-            "spike lee",
-        ],
-    ),
-    (
-        "departed", 
-        "martin scorsese",
-        2006,
-        [
-            "leonardo dicaprio",
-            "jack nicholson",
-            "matt Damon",
-            "mark wahlberg",
-            "martin sheen",
-        ]
-
-    )
-        (
-        "pulp fiction",
-        "quentin tarantino",
-        1994,
-        [
-            "john travolta",
-            "uma thurman",
-            "samuel l. jackson",
-            "bruce willis",
-            "ving rhames",
-        ],
-    ),
-    (
-        "the shawshank redemption",
-        "frank darabont",
-        1994,
-        [
-            "tim robbins",
-            "morgan freeman",
-            "bob gunton",
-            "william sadler",
-            "clancy brown",
-        ],
-    ),
-    (
-        "parasite",
-        "bong joon-ho",
-        2019,
-        [
-            "song kang-ho",
-            "lee sun-kyun",
-            "cho yeo-jeong",
-            "choi woo-shik",
-            "park so-dam",
-        ],
-    ),
-    (
-        "black panther",
-        "ryan coogler",
-        2018,
-        [
-            "chadwick boseman",
-            "michael b. jordan",
-            "lupita nyong'o",
-            "danai gurira",
-            "letitia wright",
-        ],
-    ),
-    (
-        "mad max: fury road",
-        "george miller",
-        2015,
-        [
-            "tom hardy",
-            "charlize theron",
-            "nicholas hoult",
-            "zoe kravitz",
-            "rosi",
-        ],
-    )    
-
 ]
