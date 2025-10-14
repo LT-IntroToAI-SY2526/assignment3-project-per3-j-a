@@ -51,7 +51,16 @@ Album_db: List[Tuple[str, str, int, List[str]]] = [
     ),
 
     (#4 
-        "Doris", "Earl Sweatshirt", 2013, [ "Woah", "Sasquatch", "Molasses", "Chum", ], ),
+        "Doris", 
+        "Earl Sweatshirt", 
+        2013, 
+        [ 
+            "Woah", 
+            "Sasquatch", 
+            "Molasses", 
+            "Chum", 
+        ], 
+    ),
    
     (#5
         "The Black Keys",
