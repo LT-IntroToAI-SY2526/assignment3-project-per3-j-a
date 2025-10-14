@@ -48,34 +48,6 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
             "End",
         ],
     ),
-    (#8
-        "citizen kane",
-        "orson welles",
-        1941,
-        [
-            "orson welles",
-            "joseph cotten",
-            "dorothy comingore",
-            "ray collins",
-            "george coulouris",
-            "agnes moorehead",
-            "ruth warrick",
-        ],
-    ),
-    (#9
-        "gone with the wind",
-        "victor fleming",
-        1939,
-        [
-            "clark gable",
-            "vivien leigh",
-            "leslie howard",
-            "olivia de havilland",
-            "hattie mcdaniel",
-            "butterfly mcqueen",
-        ],
-    ),
-    , 
     (#10 
         "Doris", "Earl Sweatshirt", 2013, [ "Woah", "Sasquatch", "Molasses", "Chum", ], ),
    
