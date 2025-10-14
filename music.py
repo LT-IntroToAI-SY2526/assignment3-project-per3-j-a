@@ -12,7 +12,7 @@
 # `[(title, director, year, [actress_one, actor_two, ...]), ...]`
 from typing import List, Tuple
 
-album_db: List[Tuple[str, str, int, List[str]]] = [
+Album_db: List[Tuple[str, str, int, List[str]]] = [
     #Juan's 15 sections of albums
     (#1
         "Plastic Beach",  # name of song 
@@ -26,7 +26,7 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
         ],  # actors/actresses
     ),
 
-    (#5
+    (#2
         "Childish Gambino",
         "Camp",
         2011,
@@ -36,8 +36,9 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
             "Bonfire", 
             "Heartbeat", 
         ],
-    )
-    (#7
+    ),
+
+    (#3
         "Frank Ocean",
         "Channel Orange",
         2012,
@@ -48,38 +49,11 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
             "End",
         ],
     ),
-    (#8
-        "citizen kane",
-        "orson welles",
-        1941,
-        [
-            "orson welles",
-            "joseph cotten",
-            "dorothy comingore",
-            "ray collins",
-            "george coulouris",
-            "agnes moorehead",
-            "ruth warrick",
-        ],
-    ),
-    (#9
-        "gone with the wind",
-        "victor fleming",
-        1939,
-        [
-            "clark gable",
-            "vivien leigh",
-            "leslie howard",
-            "olivia de havilland",
-            "hattie mcdaniel",
-            "butterfly mcqueen",
-        ],
-    ),
-    , 
-    (#10 
+
+    (#4 
         "Doris", "Earl Sweatshirt", 2013, [ "Woah", "Sasquatch", "Molasses", "Chum", ], ),
    
-    (#13
+    (#5
         "The Black Keys",
         "Turn Blue",
         2014,
@@ -90,130 +64,128 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
             "In Time",
         ],
     ),
-    
-    (
-        "after the rehearsal",
-        "ingmar bergman",
-        1984,
-        ["erland josephson", "ingrid thulin", "lena olin", "nadja palmstjerna-weiss"],
-    ),
-    (
-        "amadeus",
-        "milos forman",
-        1984,
+  
+    #Max's Sections
+    (#1
+        "Currents",
+        "Tame Impala",
+        2015,
         [
-            "f murray abraham",
-            "tom hulce",
-            "elizabeth berridge",
-            "simon callow",
-            "roy dotrice",
-            "christine ebersole",
-            "jeffrey jones",
+            "Let It Happen", 
+            "The Less I Know The Better", 
+            "New Person, Same Old Mistakes", 
+            "Eventually"
         ],
     ),
-    (
-        "blood simple",
-        "joel coen",
-        1985,
+
+    (#2
+        "Views",
+        "Drake",
+        2016,
         [
-            "john getz",
-            "frances mcdormand",
-            "dan hedaya",
-            "m emmet walsh",
-            "samm-art williams",
+            "9",
+            "Summers Over Interlude",
+            "Views",
+            "Controlla",
         ],
     ),
-    (
-        "chinatown",
-        "roman polanski",
-        1974,
-        [
-            "jack nicholson",
-            "faye dunaway",
-            "john huston",
-            "perry lopez",
-            "john hillerman",
-            "darrell zwerling",
-            "diane ladd",
-            "roman polanski",
-        ],
-    ),
-    (
-        "the cotton club",
-        "francis ford coppola",
-        1984,
-        [
-            "richard gere",
-            "gregory hines",
-            "diane lane",
-            "lonette mckee",
-            "bob hoskins",
-            "james remar",
-            "fred gwynne",
-        ],
-    ),
-    (
-        "the crying game",
-        "neil jordan",
-        1992,
-        [
-            "stephen rea",
-            "jaye davidson",
-            "forest whitaker",
-            "miranda richardson",
-            "adrian dunbar",
-            "breffini mckenna",
-            "joe savino",
-        ],
-    ),
-    (
-        "the day of the jackal",
-        "fred zinnemann",
-        2,
-        [
-            "edward fox",
-            "terence alexander",
-            "michel auclair",
-            "alan badel",
-            "tony britton",
-            "denis carey",
-            "olga georges-picot",
-            "cyril cusack",
-        ],
-    ),
+
     (#3
-        "diva",
-        "jean-jacques beineix",
-        1981,
+        "DAMN",
+        "Kendrick Lamar",
+        2017,
         [
-            "wilhelmenia wiggins fernandez",
-            "frederic andrei",
-            "richard bohringer",
-            "thay an luu",
-            "jacques fabbri",
-            "chantal deruaz",
+            "DNA",
+            "Humble",
+            "PRIDE",
+            "DUCKWORTH",
         ],
     ),
+
     (#4
-        "the dresser",
-        "peter yates",
-        1984,
-        ["albert finney", 
-         "tom courtenay", 
-         "edward fox", 
-         "zena walker"
-        ],
-    ),
-    (#5
-        "el norte",
-        "gregory nava",
-        1983,
+        "ASTROWORLD",
+        "Travis Scott",
+        2018,
         [
-            "zaide silvia gutierrez",
-            "david villalpando",
-            "ernesto gomez cruz",
-            "alicia del lago",
-            "trinidad silva",
+            "SKELETONS",
+            "SICKO MODE",
+            "5% TNT",
+            "BUTTERFLY EFFECT",
         ],
     ),
+
+    (#5
+        "Igor",
+        "Tyler, The Creator",
+        2019,
+        [
+            "EARFQUAKE",
+            "IGOR'S THEME",
+            "NEW MAGIC WAND",
+            "ARE WE STILL FRIENDS?",
+        ],
+    ),
+    
+    #Adrian's Section
+    (#1
+        "After Hours",
+        "The Weekend",
+        2020,
+        [
+            "Blinding Lights",
+            "Save Your Tears",
+            "After Hours",
+            "Heartless",
+        ],
+    ),
+
+    (#2
+        "Donda",
+        "Kanye West ",
+        2021,
+        [
+            "Hurricane",
+            "Praise God",
+            "Off The Grid",
+            "Believe What I Say",
+            "New Again",
+        ],
+    ),
+
+    (#3
+        "Mr. Morale & the Big Steppers",
+        "Kendrick Lamar",
+        2022,
+        [
+            "Father Time",
+            "Die Hard",
+            "Count Me Out",
+            "Mr. Morale",
+        ],
+    ),
+
+    (#4
+        "For All The Dogs",
+        "Drake",
+        2023,
+        [
+         "Slime You Out", 
+         "First Person Shooter", 
+         "Virginia Beach", 
+         "Bahamas Promises"
+         ],
+    ),
+
+    (#5
+        "Chromakopia",
+        "Tyler, The Creator",
+        2024,
+        [
+            "St. chroma",
+            "Like Him",
+            "Noid",
+            "Sticky",
+        ],
+    ),
+
 ]
