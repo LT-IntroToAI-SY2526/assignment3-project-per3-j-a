@@ -11,7 +11,7 @@
 # `[(album, artist, year, [song_one, song_two, ...]), ...]`
 from typing import List, Tuple
 
-Album_db: List[Tuple[str, str, int, List[str]]] = [
+album_db: List[Tuple[str, str, int, List[str]]] = [
     #Juan's 15 sections of albums
     (#1
         "Plastic Beach",  # name of album 
