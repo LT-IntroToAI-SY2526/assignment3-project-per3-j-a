@@ -1,4 +1,3 @@
-# the content of the movie database is taken from the textbook Concrete Abstractions: An
 # Introduction to Computer Science Using Scheme, by Max Hailperin, Barbara Kaiser, and
 # Karl Knight, Copyright (c) 1998 by the authors. Full text is available for free at
 # http://www.gustavus.edu/+max/concrete-abstractions.html
@@ -9,13 +8,13 @@
 
 # list of tuples w/ following format (the first tuple in the list is also annotated):
 # each tuple contains title, director, year and actors/actresses
-# `[(title, director, year, [actress_one, actor_two, ...]), ...]`
+# `[(album, artist, year, [song_one, song_two, ...]), ...]`
 from typing import List, Tuple
 
 album_db: List[Tuple[str, str, int, List[str]]] = [
     #Juan's 15 sections of albums
     (#1
-        "Plastic Beach",  # name of song 
+        "Plastic Beach",  # name of album 
         "Gorillaz",  # director
         2010,  # year
         [
@@ -27,8 +26,8 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
     ),
 
     (#2
-        "Childish Gambino",
         "Camp",
+        "Childish Gambino",
         2011,
         [
             "L.E.S", 
@@ -39,8 +38,8 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
     ),
 
     (#3
-        "Frank Ocean",
         "Channel Orange",
+        "Frank Ocean",
         2012,
         [
             "Pink Matter",
@@ -63,8 +62,8 @@ album_db: List[Tuple[str, str, int, List[str]]] = [
     ),
    
     (#5
-        "The Black Keys",
         "Turn Blue",
+        "The Black Keys",
         2014,
         [
             "Weight of Love",
