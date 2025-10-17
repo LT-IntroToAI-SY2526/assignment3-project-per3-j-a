@@ -1,22 +1,22 @@
-from music import Album_db
+from music import album_db
 from match import match
 from typing import List, Tuple, Callable, Any
 
 # The projection functions, that give us access to certain parts of a "album" (a tuple)
-def get_album(Album_db: Tuple[str, str, int, List[str]]) -> str:
-    return Album_db[0]
+def get_album(album_db: Tuple[str, str, int, List[str]]) -> str:
+    return album_db[0]
 
 
-def get_artist(Album_db: Tuple[str, str, int, List[str]]) -> str:
-    return Album_db[1]
+def get_artist(album_db: Tuple[str, str, int, List[str]]) -> str:
+    return album_db[1]
 
 
-def get_year(Album_db: Tuple[str, str, int, List[str]]) -> int:
-    return Album_db[2]
+def get_year(album_db: Tuple[str, str, int, List[str]]) -> int:
+    return album_db[2]
 
 
-def get_songs(Album_db: Tuple[str, str, int, List[str]]) -> List[str]:
-    return Album_db[3]
+def get_songs(album_db: Tuple[str, str, int, List[str]]) -> List[str]:
+    return album_db[3]
 
 
 # Below are a set of actions. Each takes a list argument and returns a list of answers
@@ -37,7 +37,7 @@ def album_by_year(matches: List[str]) -> List[str]:
     #["1974"]
     year = int(matches[0])
     result = []
-    for Album in Album_db:
+    for Album in album_db:
         if get_year(Album) == year:
             result.append(get_album(Album))
     return result    
@@ -60,7 +60,7 @@ def album_by_year_range(matches: List[str]) -> List[str]:
     start_year =  int(matches[0])
     end_year =  int(matches[1])
 
-    for Album in Album_db:
+    for Album in album_db:
         Album_year = get_year(Album)
         if start_year <= Album_year <= end_year:
             result.append(get_album(Album))
@@ -79,7 +79,7 @@ def album_before_year(matches: List[str]) -> List[str]:
     """
     year = int(matches[0])
     result = []
-    for Album in Album_db:
+    for Album in album_db:
             if get_year(Album) < year:
              result.append(get_album(Album))
     return result    
@@ -97,7 +97,7 @@ def album_after_year(matches: List[str]) -> List[str]:
     """
     year = int(matches[0])
     result = []
-    for Album in Album_db:
+    for Album in album_db:
             if get_year(Album) > year:
              result.append(get_album(Album))
     return result
@@ -115,7 +115,7 @@ def artist_by_album(matches: List[str]) -> List[str]:
     result = []
     album = matches[0]
 
-    for Album in Album_db:
+    for Album in album_db:
         if get_album(Album) == album:
             result.append(get_artist(Album))
     return result
@@ -133,7 +133,7 @@ def album_by_artist(matches: List[str]) -> List[str]:
     result = []
     artist = matches[0]
 
-    for Album in Album_db:
+    for Album in album_db:
         if get_artist(Album) == artist:
             result.append(get_album(Album))
     return result
@@ -152,7 +152,7 @@ def songs_by_album(matches: List[str]) -> List[str]:
     result = []
     album = matches[0]
 
-    for Album in Album_db:
+    for Album in album_db:
         if get_album(Album) == album:
             result = get_songs(Album)
             break
@@ -171,7 +171,7 @@ def year_by_album(matches: List[str]) -> List[int]:
     """
     result = []
     album = (matches[0])
-    for Album in Album_db:
+    for Album in album_db:
         if get_album(Album) == album:
             result.append(get_year(Album))
     return result   
@@ -189,7 +189,7 @@ def album_by_song(matches: List[str]) -> List[str]:
     result = []
     song_name = matches[0]
 
-    for Album in Album_db:
+    for Album in album_db:
         songs = get_songs(Album)
 
         for song in songs:
@@ -210,7 +210,7 @@ def artist_by_year(matches: List[str]) -> List[int]:
     result = []
     year = matches[0]
 
-    for Album in Album_db:
+    for Album in album_db:
         if get_artist(Album) == year:
             result = get_artist(Album)
             break
