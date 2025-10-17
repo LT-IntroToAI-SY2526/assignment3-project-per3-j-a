@@ -228,17 +228,16 @@ pa_list: List[Tuple[List[str], Callable[[List[str]], List[Any]]]] = [
     (str.split("what Albums were made between _ and _"), album_by_year_range),
     (str.split("what Albums were made before _"), album_before_year),
     (str.split("what Albums were made after _"), album_after_year),
-    # note there are two valid patterns here two different ways to ask for the artist
-    # of a Album
     (str.split("who directed %"), artist_by_album),
     (str.split("who was the artist of %"), artist_by_album),
     (str.split("what Albums were directed by %"), album_by_artist),
     (str.split("who acted in %"), songs_by_album),
     (str.split("when was % made"), year_by_album),
     (str.split("in what Albums did % appear"), album_by_song),
-    (str.split("Who directed a Album in _"),artist_by_year)
+    (str.split("who directed a album in _"), artist_by_year),  # comma fixed, pattern lowercase
     (["bye"], bye_action),
 ]
+
 
 
 def search_pa_list(src: List[str]) -> List[str]:
@@ -287,62 +286,56 @@ def query_loop() -> None:
 # it out. Before running the following line, you should make sure that your code passes
 # the existing asserts.
 # query_loop()
-"""
-if __name__ == "__main__":
-    assert isinstance(album_by_year(["1974"]), list), "album_by_year not returning a list"
-    assert sorted(album_by_year(["1974"])) == sorted(
-        ["amarcord", "chinatown"]
-    ), "failed album_by_year test"
-    assert isinstance(album_by_year_range(["1970", "1972"]), list), "album_by_year_range not returning a list"
-    assert sorted(album_by_year_range(["1970", "1972"])) == sorted(
-        ["the godfather", "johnny got his gun"]
-    ), "failed album_by_year_range test"
-    assert isinstance(album_before_year(["1950"]), list), "album_before_year not returning a list"
-    assert sorted(album_before_year(["1950"])) == sorted(
-        ["casablanca", "citizen kane", "gone with the wind", "metropolis"]
-    ), "failed album_before_year test"
-    assert isinstance(album_after_year(["1990"]), list), "album_after_year not returning a list"
-    assert sorted(album_after_year(["1990"])) == sorted(
-        ["boyz n the hood", "dead again", "the crying game", "flirting", "malcolm x", "Silence of the Lambs"]
-    ), "failed album_after_year test"
-    assert isinstance(artist_by_album(["jaws"]), list), "artist_by_album not returning a list"
-    assert sorted(artist_by_album(["jaws"])) == sorted(
-        ["steven spielberg"]
-    ), "failed artist_by_album test"
-    assert isinstance(album_by_artist(["steven spielberg"]), list), "album_by_artist not returning a list"
-    assert sorted(album_by_artist(["steven spielberg"])) == sorted(
-        ["jaws"]
-    ), "failed album_by_artist test"
-    assert isinstance(songs_by_album(["jaws"]), list), "songs_by_album not returning a list"
-    assert sorted(songs_by_album(["jaws"])) == sorted(
-        [
-            "roy scheider",
-            "robert shaw",
-            "richard dreyfuss",
-            "lorraine gary",
-            "murray hamilton",
-        ]
-    ), "failed songs_by_album test"
-    assert sorted(songs_by_album(["Album not in database"])) == [], "failed songs_by_album not in database test"
-    assert isinstance(year_by_album(["jaws"]), list), "year_by_album not returning a list"
-    assert sorted(year_by_album(["jaws"])) == sorted(
-        [1975]
-    ), "failed year_by_album test"
-    assert isinstance(album_by_song(["orson welles"]), list), "album_by_song not returning a list"
-    assert sorted(album_by_song(["orson welles"])) == sorted(
-        ["citizen kane", "othello"]
-    ), "failed album_by_song test"
-    
-    
-    assert sorted(search_pa_list(["hi", "there"])) == sorted(
-        ["I don't understand"]
-    ), "failed search_pa_list test 1"
-    assert sorted(search_pa_list(["who", "directed", "jaws"])) == sorted(
-        ["steven spielberg"]
-    ), "failed search_pa_list test 2"
-    assert sorted(
-        search_pa_list(["what", "Albums", "were", "made", "in", "2020"])
-    ) == sorted(["No answers"]), "failed search_pa_list test 3"
 
-    print("All tests passed!")
-    """
+if __name__ == "__main__":
+    # Testing album_by_year with a year we know exists in the DB
+    assert isinstance(album_by_year(["2010"]), list), "album_by_year should return a list"
+    assert "Plastic Beach" in album_by_year(["2010"]), "Plastic Beach should be in albums made in 2010"
+    
+    # Testing album_by_year_range for a range that includes several albums
+    albums_2010_2012 = album_by_year_range(["2010", "2012"])
+    assert "Plastic Beach" in albums_2010_2012, "Plastic Beach should be in the range 2010-2012"
+    assert "Camp" in albums_2010_2012, "Camp should be in the range 2010-2012"
+    assert "Channel Orange" in albums_2010_2012, "Channel Orange should be in the range 2010-2012"
+    
+    # Test album_before_year for albums before 2010 (should not include 2010 itself)
+    albums_before_2010 = album_before_year(["2010"])
+    for album in albums_before_2010:
+        year = year_by_album([album])[0]
+        assert year < 2010, f"{album} should be before 2010"
+    
+    # Test album_after_year for albums after 2019 (should not include 2019)
+    albums_after_2019 = album_after_year(["2019"])
+    for album in albums_after_2019:
+        year = year_by_album([album])[0]
+        assert year > 2019, f"{album} should be after 2019"
+    
+    # Test artist_by_album for known album
+    artist = artist_by_album(["Plastic Beach"])
+    assert artist == ["Gorillaz"], "Artist of Plastic Beach should be Gorillaz"
+    
+    # Test album_by_artist for an artist with multiple albums (e.g., Kendrick Lamar)
+    kendrick_albums = album_by_artist(["Kendrick Lamar"])
+    assert "DAMN" in kendrick_albums, "DAMN should be a Kendrick Lamar album"
+    assert "Mr. Morale & the Big Steppers" in kendrick_albums, "Mr. Morale & the Big Steppers should be a Kendrick Lamar album"
+    
+    # Test songs_by_album returns correct songs
+    songs = songs_by_album(["Donda"])
+    assert "Hurricane" in songs, "Hurricane should be a song in Donda"
+    assert "Praise God" in songs, "Praise God should be a song in Donda"
+    
+    # Test year_by_album returns correct year
+    year = year_by_album(["Currents"])
+    assert year == [2015], "Currents was released in 2015"
+    
+    # Test album_by_song for a song in multiple albums or unique song
+    albums_with_song = album_by_song(["Blinding Lights"])
+    assert "After Hours" in albums_with_song, "Blinding Lights is in After Hours"
+    
+    # Test for a song that is not in the DB returns empty list
+    assert album_by_song(["SongThatDoesNotExist"]) == [], "Unknown song should return empty list"
+    
+    # Test search_pa_list returns "I don't understand" for nonsense query
+    assert search_pa_list(["hello", "world"]) == ["I don't understand"], "Unknown query should return 'I don't understand'"
+    
+    print("All asserts passed! Nice work!")
