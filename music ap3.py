@@ -48,13 +48,13 @@ def album_by_year_range(matches: List[str]) -> List[str]:
 
     Args:
         matches - a list of 2 strings, the year beginning the range and the year ending
-            the range. For example, to get Albums from 1991-1994 matches would look like
-            this - ["1991", "1994"] Note that these years are passed as strings and
+            the range. For example, to get Albums from 2010-2013 matches would look like
+            this - ["2010", "2012"] Note that these years are passed as strings and
             should be converted to ints.
 
     Returns:
         a list of Album albums made during those years, inclusive (meaning if you pass
-        in ["1991", "1994"] you will get Albums made in 1991, 1992, 1993 & 1994)
+        in ["2010", "2013"] you will get Albums made in 2010, 2011, 2012 & 2013)
     """
     result = []
     start_year =  int(matches[0])
@@ -75,7 +75,7 @@ def album_before_year(matches: List[str]) -> List[str]:
 
     Returns:
         a list of Album albums made before the passed in year, exclusive (meaning if you
-        pass in 1992 you won't get any Albums made that year, only before)
+        pass in 2011 you won't get any Albums made that year, only before)
     """
     year = int(matches[0])
     result = []
@@ -93,7 +93,7 @@ def album_after_year(matches: List[str]) -> List[str]:
 
     Returns:
         a list of Album albums made after the passed in year, exclusive (meaning if you
-        pass in 1992 you won't get any Albums made that year, only after)
+        pass in 2011 you won't get any Albums made that year, only after)
     """
     year = int(matches[0])
     result = []
@@ -146,7 +146,7 @@ def songs_by_album(matches: List[str]) -> List[str]:
         matches - a list of 1 string, just the Album album
 
     Returns:
-        a list of songs who acted in the passed in album
+        a list of songs in the passed in album
     """
 
     result = []
@@ -184,7 +184,7 @@ def album_by_song(matches: List[str]) -> List[str]:
         matches - a list of 1 string, just the song
 
     Returns:
-        a list of Album albums that the song acted in
+        a list of Album albums that the song was in
     """
     result = []
     song_name = matches[0]
@@ -228,13 +228,13 @@ pa_list: List[Tuple[List[str], Callable[[List[str]], List[Any]]]] = [
     (str.split("what Albums were made between _ and _"), album_by_year_range),
     (str.split("what Albums were made before _"), album_before_year),
     (str.split("what Albums were made after _"), album_after_year),
-    (str.split("who directed %"), artist_by_album),
+    (str.split("who produced %"), artist_by_album),
     (str.split("who was the artist of %"), artist_by_album),
-    (str.split("what Albums were directed by %"), album_by_artist),
-    (str.split("who acted in %"), songs_by_album),
+    (str.split("what Albums were produced by %"), album_by_artist),
+    (str.split("who produced %"), songs_by_album),
     (str.split("when was % made"), year_by_album),
     (str.split("in what Albums did % appear"), album_by_song),
-    (str.split("who directed a album in _"), artist_by_year),  # comma fixed, pattern lowercase
+    (str.split("who produced a album in _"), artist_by_year),  # comma fixed, pattern lowercase
     (["bye"], bye_action),
 ]
 
